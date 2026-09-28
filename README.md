@@ -254,6 +254,7 @@ Issues and PRs are welcome, especially:
 
 - [Andrej Karpathy](https://github.com/karpathy/llm-council) for the original LLM Council: answer → anonymous peer ranking → chairman.
 - The original "LLM Council" Claude skill that introduced the five thinking-style advisors.
+- Co-built with **Claude** (Anthropic) in [Claude Code](https://claude.com/claude-code).
 
 ## 📄 License
 
