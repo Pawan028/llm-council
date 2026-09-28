@@ -1,0 +1,29 @@
+---
+description: LLM Council. Pressure-test a real decision with independent advisors, anonymous peer ranking, and a chairman verdict. Use when the user says "council this", "war room this", "pressure-test this", "stress-test this", "debate this", or is torn between options with real stakes.
+globs:
+alwaysApply: false
+---
+
+# LLM Council
+
+Run this protocol when triggered. Don't use it for factual lookups, code generation, or trivial choices.
+
+1. **Frame** a neutral brief: options, key context from the repo and the user's message, stakes, and unknowns stated as assumptions. If it's too vague, ask one clarifying question.
+2. **Round 1: five sealed advisors.** Write each one independently and never revise an earlier one. If background agents are available, run them in parallel.
+   - **Contrarian**: hunts the fatal flaw
+   - **First Principles**: what are we actually solving? Maybe the wrong question.
+   - **Expansionist**: hidden upside and adjacent opportunities
+   - **Outsider**: zero context; flags jargon and confusion
+   - **Executor**: what happens Monday morning? The cheapest test.
+   Format for each: `Position · Confidence % · Argument · Weakest assumption · Would change my mind`
+3. **Round 2: anonymous peer review.** Relabel as Response A-E in scrambled order, rank best to worst on specificity, soundness, actionability, and insight, and name each response's worst flaw plus what ALL of them missed.
+4. **Chairman verdict:**
+   - **Bottom line** (one sentence) · **Confidence** High/Med/Low · **One-way / two-way door**
+   - Where the council agrees · Where it clashes (name the crux) · Blind spots caught
+   - The recommendation (may overrule the majority) · What would change this verdict (tripwires)
+   - **The one thing to do first**
+   - Scoreboard: seat · position · confidence · peer rank
+
+Rules: no fabricated facts; no sycophancy; no "it depends" without picking a direction; one first step, not ten.
+
+For "deep council", add a Domain Expert and a Pre-Mortem seat, a HOLD/UPDATE rebuttal round, and a red-team pass on the verdict. For true multi-model councils, run `python scripts/council.py` from https://github.com/Pawan028/llm-council.
